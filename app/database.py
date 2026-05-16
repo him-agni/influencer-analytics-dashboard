@@ -10,17 +10,23 @@ from app.core.config import get_settings
 
 settings = get_settings()
 
+# ── Railway compatibility ─────────────────────────────────────
+# Railway provides DATABASE_URL as "postgresql://..." but asyncpg needs "postgresql+asyncpg://..."
+db_url = settings.database_url
+if db_url.startswith("postgresql://"):
+    db_url = db_url.replace("postgresql://", "postgresql+asyncpg://", 1)
+
 # ── Engine Configuration ──────────────────────────────────────
 # SQLite needs connect_args for check_same_thread
 if settings.is_sqlite:
     engine = create_async_engine(
-        settings.database_url,
+        db_url,
         echo=False,
         connect_args={"check_same_thread": False},
     )
 else:
     engine = create_async_engine(
-        settings.database_url,
+        db_url,
         echo=False,
         pool_size=10,
         max_overflow=20,

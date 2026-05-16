@@ -21,9 +21,10 @@ python-dotenv>=1.0.0
 # Scheduling
 apscheduler>=3.10.0
 
-# AI / Sentiment Analysis
-transformers>=4.45.0
-torch>=2.4.0
+# AI / Sentiment Analysis (optional — uncomment for local use, ~3GB)
+# These are too large for Railway free tier; sentiment gracefully degrades without them.
+# transformers>=4.45.0
+# torch>=2.4.0
 
 # HTTP client
 httpx>=0.27.0
