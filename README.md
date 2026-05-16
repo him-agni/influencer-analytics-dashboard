@@ -1,6 +1,9 @@
 # 📊 Influencer Analytics Dashboard
 
 YouTube channel analytics — collect data, analyze sentiment, score influence, all from a premium Web UI.
+<img width="1880" height="827" alt="image" src="https://github.com/user-attachments/assets/11878d16-e0d8-424c-9e07-f45176c9e870" />
+
+Link - https://web-production-c5d7e8.up.railway.app/
 
 ## 🆓 Cost: Everything is FREE
 
