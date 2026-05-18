@@ -59,7 +59,7 @@ class AnomalyDetector:
         if len(growth_history) < 2:
             return []
 
-        sorted_growth = sorted(growth_history, key=lambda x: x.date)
+        sorted_growth = sorted(growth_history, key=lambda x: x.timestamp)
 
         spikes = []
         for i in range(1, len(sorted_growth)):
@@ -70,7 +70,7 @@ class AnomalyDetector:
                 jump_pct = ((curr.subscribers - prev.subscribers) / prev.subscribers) * 100
                 if jump_pct >= self.suspicious_growth_pct and curr.subscribers > 1000:
                     spikes.append({
-                        "date": curr.date.isoformat(),
+                        "date": curr.timestamp.isoformat(),
                         "old_subscribers": prev.subscribers,
                         "new_subscribers": curr.subscribers,
                         "percentage_jump": round(jump_pct, 2),
@@ -90,7 +90,7 @@ class AnomalyDetector:
         if len(growth_history) < 2:
             return []
 
-        sorted_growth = sorted(growth_history, key=lambda x: x.date)
+        sorted_growth = sorted(growth_history, key=lambda x: x.timestamp)
 
         drops = []
         for i in range(1, len(sorted_growth)):
@@ -103,7 +103,7 @@ class AnomalyDetector:
                 # Only flag negative changes exceeding the threshold
                 if change_pct <= -self.drop_threshold_pct and lost > 100:
                     drops.append({
-                        "date": curr.date.isoformat(),
+                        "date": curr.timestamp.isoformat(),
                         "old_subscribers": prev.subscribers,
                         "new_subscribers": curr.subscribers,
                         "lost_count": lost,
