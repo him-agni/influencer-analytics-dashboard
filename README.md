@@ -4,6 +4,8 @@
 
 **A full-stack YouTube influencer analytics platform — collect channel data, visualize engagement trends, detect anomalies, and benchmark competitors.**
 
+Link- https://web-production-c5d7e8.up.railway.app/
+
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)](https://postgresql.org)
