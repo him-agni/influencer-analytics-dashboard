@@ -3,6 +3,7 @@
 # 📊 Influencer Analytics Dashboard
 
 **A full-stack YouTube influencer analytics platform — collect channel data, visualize engagement trends, detect anomalies, and benchmark competitors.**
+<img width="1871" height="811" alt="image" src="https://github.com/user-attachments/assets/e9f0b97f-9afe-4107-9249-0f036339dd20" />
 
 Link- https://web-production-c5d7e8.up.railway.app/
 
